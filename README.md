@@ -1,17 +1,13 @@
 Project-Euler
 =============
 
-Project Euler Solutions
-
-<p>The following is taken from: https://projecteuler.net/</p>
-<br>
-<p><b>About Project Euler</b></p>
-<br>
-<b>What is Project Euler?</b>
+<h5>Project Euler Solutions</h5>
+<p>The following text is taken from: https://projecteuler.net</p>
+<h5>About Project Euler</h5>
+<h5>What is Project Euler?</h5>
 <p>Project Euler is a series of challenging mathematical/computer programming problems that will require more than just mathematical insights to solve. Although mathematics will help you arrive at elegant and efficient methods, the use of a computer and programming skills will be required to solve most problems.</p>
 <p>The motivation for starting Project Euler, and its continuation, is to provide a platform for the inquiring mind to delve into unfamiliar areas and learn new concepts in a fun and recreational context.</p>
-<br>
-<b>Who are the problems aimed at?</b>
+<h5>Who are the problems aimed at?</h5>
 <p>The intended audience include students for whom the basic curriculum is not feeding their hunger to learn, adults whose background was not primarily mathematics but had an interest in things mathematical, and professionals who want to keep their problem solving and mathematics on the edge.</p>
 <br>
 <b>Can anyone solve the problems?</b>
