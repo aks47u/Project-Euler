@@ -6,7 +6,7 @@ package Solved_101_125;
  * 
  * The Fibonacci sequence is defined by the recurrence relation:
  * 
- * Fn = Fn−1 + Fn−2, where F1 = 1 and F2 = 1.
+ * Fn = Fn-1 + Fn-2, where F1 = 1 and F2 = 1.
  * 
  * It turns out that F541, which contains 113 digits, is the first Fibonacci
  * number for which the last nine digits are 1-9 pandigital (contain all the
