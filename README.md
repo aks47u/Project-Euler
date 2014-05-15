@@ -35,14 +35,12 @@ Project-Euler
 <p>In order to track your progress it is necessary to setup an
 	account and have Cookies enabled. If you already have an account then
 	Login, otherwise please Register - it's completely free!</p>
+<p>However, as the problems are challenging then you may wish to
+	view the Problems before registering.</p>
+<br />
+<br />
 <p>
-	However, as the problems are challenging then you may wish to view the
-	<a href="problems">Problems</a> before registering.
+	<i>Project Euler exists to encourage, challenge, and develop the
+		skills and enjoyment of anyone with an interest in the fascinating
+		world of mathematics.&quot;</i>
 </p>
-<br />
-<br />
-<p
-	style="text-align: center; font-size: 125%; font-style: italic; color: #999;">&quot;Project
-	Euler exists to encourage, challenge, and develop the skills and
-	enjoyment of anyone with an interest in the fascinating world of
-	mathematics.&quot;</p>
