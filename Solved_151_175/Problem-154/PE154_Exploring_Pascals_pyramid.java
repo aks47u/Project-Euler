@@ -24,7 +24,7 @@ package Solved_151_175;
  * 10^12?
  */
 public class PE154_Exploring_Pascals_pyramid {
-	public static void main(String args[]) {
+	public static void main(String[] args) {
 		long start = System.nanoTime();
 
 		int lim = 200000;
