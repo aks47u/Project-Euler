@@ -37,7 +37,7 @@ public class PE151_Paper_sheets_of_standard_sizes_an_expected_value_problem {
 
 		long end = System.nanoTime();
 		long runtime = end - start;
-		System.out.print(String.format("%.6g%n", result));
+		System.out.printf(String.format("%.6g%n", result));
 		System.out.println("Runtime: " + runtime / 1000000 + "ms (" + runtime
 				+ "ns)");
 	}
