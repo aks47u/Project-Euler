@@ -22,11 +22,11 @@ double mcp(register double n) {
 	
     while(divisible(n, 2)) {
         n /= 2;
-	}
+    }
 	
     if(n == 1) {
         return 2;
-	}
+    }
 	
     rt = sqrt(n);
 	
@@ -39,6 +39,6 @@ double mcp(register double n) {
 		
         d += 2;
     }
-	
-	return n;
+    
+    return n;
 }
