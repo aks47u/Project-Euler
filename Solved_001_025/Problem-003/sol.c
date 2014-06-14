@@ -18,7 +18,7 @@ double mcp(register double n) {
 	
     if(n < 2) {
         return -1;
-	}
+    }
 	
     while(divisible(n, 2)) {
         n /= 2;
