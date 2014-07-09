@@ -1,8 +1,8 @@
 x = y = 1
-sum = 0
+result = 0
 
-while (sum < 4000000):
-	sum += (x + y)
+while (result < 4000000):
+	result += (x + y)
 	x, y = x + 2 * y, 2 * x + 3 * y
   
-print sum
+print result
