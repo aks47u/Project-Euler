@@ -11,17 +11,20 @@ public class PE007_10001st_prime {
 	public static void main(String[] args) {
 		long start = System.nanoTime();
 
-		int y, c = 0, result = 0;
+		int j, counter = 0, result = 0;
+
 		for (int i = 2; i < 110000; i++) {
 			if (i % 2 != 0 || i == 2) {
-				for (y = 2; y <= i / 2; y++) {
-					if (i % y == 0) {
+				for (j = 2; j <= i / 2; j++) {
+					if (i % j == 0) {
 						break;
 					}
 				}
-				if (y > i / 2) {
-					c++;
-					if (c == 10001) {
+
+				if (j > i / 2) {
+					counter++;
+
+					if (counter == 10001) {
 						result = i;
 						break;
 					}
