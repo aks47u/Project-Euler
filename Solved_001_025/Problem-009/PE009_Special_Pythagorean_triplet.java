@@ -15,9 +15,11 @@ public class PE009_Special_Pythagorean_triplet {
 
 		double c = 0.0;
 		int result = 0;
+		
 		for (int a = 0; a < 1000; a++)
 			for (int b = 0; b < 1000; b++) {
 				c = Math.sqrt((a * a) + (b * b));
+				
 				if (a + b + c == 1000 && a * b * c != 0) {
 					result = (int) (a * b * c);
 					break;
