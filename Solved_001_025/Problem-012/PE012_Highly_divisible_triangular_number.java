@@ -17,17 +17,21 @@ public class PE012_Highly_divisible_triangular_number {
 	
 	public static void main(String[] args) {
 		long start = System.nanoTime();
+		
 		int counter = 0;
+		
 		for (int i = 1; counter <= 500; i++) {
 			if (i % 2 == 0) {
 				counter = count(i / 2) * count(i + 1);
 			} else {
 				counter = count(i) * count((i + 1) / 2);
 			}
+			
 			if (counter > 500) {
 				result = i;
 			}
 		}
+		
 		long end = System.nanoTime();
 		long runtime = end - start;
 		System.out.println(result * (result + 1) / 2);
@@ -37,14 +41,17 @@ public class PE012_Highly_divisible_triangular_number {
 
 	private static int count(int n) {
 		int result = 0;
+		
 		for (int i = 1; i * i <= n; i++) {
 			if (n % i == 0) {
 				result += 2;
+				
 				if (n / i == i) {
 					result--;
 				}
 			}
 		}
+		
 		return result;
 	}
 }
