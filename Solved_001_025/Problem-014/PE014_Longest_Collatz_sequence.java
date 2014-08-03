@@ -19,13 +19,16 @@ public class PE014_Longest_Collatz_sequence {
 
 		long a;
 		int j, max = 0, result = 0;
+		
 		for (int i = 1; i < 1000000; i++) {
 			a = i;
 			j = 1;
+			
 			while (a != 1) {
 				a = ((a & 1) == 1) ? (3 * a + 1) : (a >> 1);
 				j++;
 			}
+			
 			if (j > max) {
 				max = j;
 				result = i;
