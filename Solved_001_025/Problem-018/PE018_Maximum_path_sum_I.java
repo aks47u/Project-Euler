@@ -71,12 +71,14 @@ public class PE018_Maximum_path_sum_I {
 
 			// Find parents
 			parentLeftIndex = i - currentRow;
+			
 			if (parentLeftIndex >= 0 && parentLeftIndex != i && numCount > 1) {
 				parentLeftSum = ((Integer) v.elementAt(parentLeftIndex))
 						.intValue() + arr[i];
 			}
 
 			parentRightIndex = i - (currentRow - 1);
+			
 			if (parentRightIndex >= 0 && parentRightIndex != i
 					&& (numCount != (last + 1))) {
 				parentRightSum = ((Integer) v.elementAt(parentRightIndex))
@@ -95,6 +97,7 @@ public class PE018_Maximum_path_sum_I {
 				last = numCount;
 				numCount = 0;
 			}
+			
 			numCount++;
 		}
 
@@ -106,6 +109,7 @@ public class PE018_Maximum_path_sum_I {
 
 		while (it.hasNext()) {
 			current = ((Integer) it.next()).intValue();
+			
 			if (current > result) {
 				result = current;
 			}
@@ -114,6 +118,7 @@ public class PE018_Maximum_path_sum_I {
 				last = colCount;
 				colCount = 0;
 			}
+			
 			colCount++;
 		}
 
