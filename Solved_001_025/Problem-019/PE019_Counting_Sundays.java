@@ -33,11 +33,13 @@ public class PE019_Counting_Sundays {
 		endDate.set(Calendar.YEAR, 2000);
 
 		int result = 0;
+		
 		while (startDate.before(endDate)) {
 			if (startDate.get(Calendar.DAY_OF_WEEK) == Calendar.SUNDAY
 					&& startDate.get(Calendar.DAY_OF_MONTH) == 1) {
 				result++;
 			}
+			
 			startDate.add(Calendar.MONTH, 1);
 		}
 
