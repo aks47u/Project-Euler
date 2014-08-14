@@ -21,6 +21,7 @@ public class PE020_Factorial_digit_sum {
 			BigInteger bi2 = BigInteger.valueOf(i);
 			bi1 = bi1.multiply(bi2);
 		}
+		
 		String big = bi1.toString();
 
 		for (int i = 0; i < big.length(); i++) {
