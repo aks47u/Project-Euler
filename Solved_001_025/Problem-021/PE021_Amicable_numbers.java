@@ -45,6 +45,7 @@ public class PE021_Amicable_numbers {
 
 	private static long properDivisors(long num) {
 		long total = 0;
+		
 		for (int i = 1; i < num; i++) {
 			if (num % i == 0) {
 				total += i;
