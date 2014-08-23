@@ -1,7 +1,7 @@
 Project-Euler
 =============
 
-<h5>Project Euler Solutions</h5>
+<h5>Project Euler solutions</h5>
 <p>The following text is taken from: https://projecteuler.net</p>
 <br>
 <h2>About Project Euler</h2>
