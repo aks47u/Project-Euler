@@ -32,13 +32,15 @@ public class PE027_Quadratic_primes {
 		long start = System.nanoTime();
 
 		int maxCount = 0, result = 0;
-		int n = 0;
-		int temp = 0;
+		int n = 0, temp = 0;
+		
 		for (int a = -1000; a <= 1000; a++) {
 			for (int b = 1; b <= 1000; b++) {
 				n = 0;
+				
 				do {
 					temp = (n * n) + (a * n) + b;
+					
 					if (temp > 0 && isNumberPrime(temp)) {
 						n++;
 					} else {
@@ -64,6 +66,7 @@ public class PE027_Quadratic_primes {
 		if (no == 1 || no == 2 || no == 3) {
 			return true;
 		}
+		
 		if (no % 2 == 0) {
 			return false;
 		} else {
@@ -73,6 +76,7 @@ public class PE027_Quadratic_primes {
 				}
 			}
 		}
+		
 		return true;
 	}
 }
