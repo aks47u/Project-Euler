@@ -23,6 +23,7 @@ public class PE028_Number_spiral_diagonals {
 		long start = System.nanoTime();
 
 		int result = 0, j = 2;
+		
 		for (int i = 1; i <= 1001 * 1001; result += i, i += j) {
 			if ((j + 1) * (j + 1) == i) {
 				j += 2;
