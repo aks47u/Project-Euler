@@ -58,15 +58,18 @@ public class PE029_Distinct_powers {
 		for (int i = 2; i <= size; i++) {
 			int power = i * i;
 			int limit = size;
+			
 			for (int f = 2; power <= size; f++) {
 				for (int j = 2; j <= limit; j++) {
 					if (j % f == 0) {
 						int d = j / f;
+						
 						if (d <= size && lowerDivisorExists(j, f)) {
 							counters[power][d] = 0;
 						}
 					}
 				}
+				
 				limit = size * f;
 				power *= i;
 			}
