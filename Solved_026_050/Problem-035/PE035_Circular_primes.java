@@ -35,6 +35,7 @@ public class PE035_Circular_primes {
 		}
 
 		int result = 1;
+		
 		for (int i = 3; i < n; i += 2) {
 			if (isprime[i]) {
 				int pow = 1;
