@@ -10,15 +10,17 @@ package Solved_001_025;
  */
 
 public class PE004_Largest_palindrome_product {
-	public static void main(String args[]) {
+	public static void main(String[] args) {
 		long start = System.nanoTime();
 
 		int result = 0, product = 0;
 		String palindrome = "";
+		
 		for (int i = 999; i > 99; i--) {
 			for (int j = 999; j > 99; j--) {
 				product = i * j;
 				palindrome = String.valueOf(product);
+				
 				if (new StringBuffer(palindrome).reverse().toString()
 						.equals(palindrome)
 						&& product > result) {
