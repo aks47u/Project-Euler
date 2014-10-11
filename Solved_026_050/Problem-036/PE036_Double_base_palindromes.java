@@ -38,11 +38,13 @@ public class PE036_Double_base_palindromes {
 
 	private static boolean isPalindrome(String s) {
 		boolean isPal = true;
+		
 		for (int i = 0; i < s.length() / 2 && isPal; i++) {
 			if (s.charAt(i) != s.charAt(s.length() - i - 1)) {
 				isPal = false;
 			}
 		}
+		
 		return isPal;
 	}
 }
