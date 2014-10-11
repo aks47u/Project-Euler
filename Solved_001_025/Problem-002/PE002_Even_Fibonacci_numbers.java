@@ -20,6 +20,7 @@ public class PE002_Even_Fibonacci_numbers {
 			num1 += num2;
 			fib1 = num2 % 2;
 			fib2 = num1 % 2;
+			
 			if (fib1 == 0) {
 				current += num2;
 			} else if (fib2 == 0) {
