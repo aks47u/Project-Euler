@@ -14,6 +14,7 @@ public class PE010_Summation_of_primes {
 		long start = System.nanoTime();
 
 		BigInteger result = BigInteger.ZERO;
+		
 		for (BigInteger num = BigInteger.valueOf(2); num.compareTo(BigInteger
 				.valueOf(2000000)) < 0; num = num.nextProbablePrime()) {
 			result = result.add(num);
