@@ -94,7 +94,7 @@ public class PE011_Largest_product_in_a_grid {
 				+ "ns)");
 	}
 
-	public static int prod(int r, int c, int[][] mat, int dir, int left) {
+	private static int prod(int r, int c, int[][] mat, int dir, int left) {
 		if (r < 0 || r > 19 || c < 0 || c > 19 || mat[r][c] == 0) {
 			return 0;
 		}
