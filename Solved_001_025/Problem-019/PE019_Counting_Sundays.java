@@ -26,12 +26,10 @@ public class PE019_Counting_Sundays {
 		startDate.set(Calendar.DATE, 1);
 		startDate.set(Calendar.MONTH, Calendar.JANUARY);
 		startDate.set(Calendar.YEAR, 1901);
-
 		Calendar endDate = GregorianCalendar.getInstance();
 		endDate.set(Calendar.DATE, 31);
 		endDate.set(Calendar.MONTH, Calendar.DECEMBER);
 		endDate.set(Calendar.YEAR, 2000);
-
 		int result = 0;
 		
 		while (startDate.before(endDate)) {
