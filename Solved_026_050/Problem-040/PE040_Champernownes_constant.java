@@ -39,6 +39,7 @@ public class PE040_Champernownes_constant {
 		fillDigitsPerDecade();
 		int product = digit(1) * digit(10) * digit(100) * digit(1000)
 				* digit(10000) * digit(100000) * digit(1000000);
+				
 		return product;
 	}
 
@@ -55,15 +56,18 @@ public class PE040_Champernownes_constant {
 		int i = 0;
 		int base = 1;
 		int digitsPerNumber = 1;
+		
 		while (n > digitsPerDecade[i]) {
 			n -= digitsPerDecade[i++];
 			base *= 10;
 			digitsPerNumber++;
 		}
+		
 		int numberOrder = (n - 1) / digitsPerNumber + 1;
 		int digitOrder = (n - 1) % digitsPerNumber;
 		int number = base + numberOrder - 1;
 		String rep = String.valueOf(number);
+		
 		return digitVal(rep.charAt(digitOrder));
 	}
 
