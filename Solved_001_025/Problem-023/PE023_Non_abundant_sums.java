@@ -38,7 +38,6 @@ public class PE023_Non_abundant_sums {
 	}
 
 	int limit = 28123;
-
 	int[] abNums = new int[limit + 1];
 	int[] nums = new int[limit + 1];
 	boolean[] abundant = new boolean[limit + 1];
@@ -48,27 +47,35 @@ public class PE023_Non_abundant_sums {
 		for (int i = 1; i <= limit; i++) {
 			nums[i] = i;
 			abundant[i] = isAbundant(i);
+			
 			if (abundant[i]) {
 				abNums[nAb++] = i;
 			}
 		}
+		
 		for (int i = 1; i <= limit; i++) {
 			int iAb = 0;
+			
 			while (iAb < nAb) {
 				if (i - abNums[iAb] < 12) {
 					break;
 				}
+				
 				if (abundant[i - abNums[iAb]]) {
 					nums[i] = 0;
 					break;
 				}
+				
 				iAb++;
 			}
 		}
+		
 		int sum = 0;
+		
 		for (int i = 1; i <= limit; i++) {
 			sum += nums[i];
 		}
+		
 		return sum;
 	}
 
@@ -78,17 +85,22 @@ public class PE023_Non_abundant_sums {
 
 	private int sumOfDivisors(int num) {
 		int prod = 1;
+		
 		for (int i = 2; i * i <= num; ++i) {
 			int p = 1;
+			
 			while (num % i == 0) {
 				p = p * i + 1;
 				num /= i;
 			}
+			
 			prod *= p;
 		}
+		
 		if (num > 1) {
 			prod *= 1 + num;
 		}
+		
 		return prod;
 	}
 }
