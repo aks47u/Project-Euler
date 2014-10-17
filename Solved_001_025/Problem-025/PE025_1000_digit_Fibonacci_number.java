@@ -26,6 +26,7 @@ public class PE025_1000_digit_Fibonacci_number {
 			bi2 = t;
 			String total = t.toString();
 			int j = total.length();
+			
 			if (j == 1000) {
 				System.out.println(i + 3);
 				break;
