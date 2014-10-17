@@ -35,6 +35,7 @@ public class PE042_Coded_triangle_numbers {
 
 		for (int loop = 0; loop < words.length; loop++) {
 			wordValue = getWordValue(words[loop]);
+			
 			if (isTriangleNumber(wordValue)) {
 				result++;
 			}
@@ -59,6 +60,7 @@ public class PE042_Coded_triangle_numbers {
 
 	private static boolean isTriangleNumber(int number) {
 		int sqrt = (int) Math.sqrt(number * 2);
+		
 		return sqrt * (sqrt + 1) == number * 2;
 	}
 }
