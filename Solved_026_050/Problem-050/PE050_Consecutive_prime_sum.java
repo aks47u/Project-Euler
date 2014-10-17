@@ -17,8 +17,8 @@ package Solved_026_050;
  * consecutive primes?
  */
 public class PE050_Consecutive_prime_sum {
-	public static int[] primes;
-	public static boolean[] isComposite;
+	private static int[] primes;
+	private static boolean[] isComposite;
 
 	public static void main(String[] args) {
 		long start = System.nanoTime();
@@ -30,11 +30,13 @@ public class PE050_Consecutive_prime_sum {
 		for (int i = 0; i < 78498; i++) {
 			int numConsec = 1;
 			int sum = 0;
+			
 			while (sum < 1000000 && i + numConsec - 1 < 78498) {
 				if (numConsec > mostConsec && !isComposite[sum]) {
 					mostConsec = numConsec;
 					result = sum;
 				}
+				
 				sum += primes[i + numConsec - 1];
 				numConsec++;
 			}
@@ -47,7 +49,7 @@ public class PE050_Consecutive_prime_sum {
 				+ "ns)");
 	}
 	
-	public static int[] generatePrimes(int max) {
+	private static int[] generatePrimes(int max) {
 		isComposite = new boolean[max + 1];
 
 		for (int i = 2; i * i <= max; i++) {
