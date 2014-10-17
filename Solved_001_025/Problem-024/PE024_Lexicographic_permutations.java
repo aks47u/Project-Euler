@@ -36,7 +36,7 @@ public class PE024_Lexicographic_permutations {
 	}
 
 	private static boolean nextPerm(int[] a) {
-		for (int n = a.length - 1, i = n, j; i > 0;)
+		for (int n = a.length - 1, i = n, j; i > 0;) {
 			if (a[i--] > a[i]) {
 				for (j = n; a[j] <= a[i]; j--)
 					;
@@ -49,6 +49,8 @@ public class PE024_Lexicographic_permutations {
 
 				return true;
 			}
+		}
+		
 		return false;
 	}
 }
