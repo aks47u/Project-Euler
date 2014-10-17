@@ -22,6 +22,7 @@ public class PE006_Sum_square_difference {
 			sum += i;
 			squareSum = sum * sum;
 		}
+		
 		result = squareSum - sumSquare;
 		
 		long end = System.nanoTime();
