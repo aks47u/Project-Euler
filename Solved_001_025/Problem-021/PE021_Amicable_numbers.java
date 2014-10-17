@@ -51,6 +51,7 @@ public class PE021_Amicable_numbers {
 				total += i;
 			}
 		}
+		
 		return total;
 	}
 }
