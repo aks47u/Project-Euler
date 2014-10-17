@@ -29,6 +29,7 @@ public class PE047_Distinct_primes_factors {
 			} else {
 				count = 0;
 			}
+			
 			if (count == 4) {
 				result = startNumber - 3;
 				break;
