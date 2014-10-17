@@ -35,14 +35,15 @@ public class PE026_Reciprocal_cycles {
 		MathContext mc = new MathContext(4000);
 		Pattern pattern = Pattern.compile("\\Q0.\\E"
 				+ "[\\d]*?([\\d]{8,}?)(\\1{2,}?)" + "[\\d]*?");
-
 		int max = 0;
 		int result = 0;
+		
 		for (int i = 2; i < 1000; i++) {
 			BigDecimal numerator = new BigDecimal("1", mc);
 			BigDecimal denominator = new BigDecimal(String.valueOf(i), mc);
 			String str = numerator.divide(denominator, mc).toString();
 			Matcher matcher = pattern.matcher(str);
+			
 			if (matcher.find()) {
 				if (matcher.group(1).length() > max) {
 					max = matcher.group(1).length();
