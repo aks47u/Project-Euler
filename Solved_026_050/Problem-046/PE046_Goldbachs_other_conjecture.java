@@ -20,8 +20,8 @@ package Solved_026_050;
  * prime and twice a square?
  */
 public class PE046_Goldbachs_other_conjecture {
-	public static int[] primes;
-	public static boolean[] isComposite;
+	private static int[] primes;
+	private static boolean[] isComposite;
 
 	public static void main(String[] args) {
 		long start = System.nanoTime();
@@ -40,6 +40,7 @@ public class PE046_Goldbachs_other_conjecture {
 						break;
 					}
 				}
+				
 				if (!foundSolution) {
 					long end = System.nanoTime();
 					long runtime = end - start;
@@ -52,7 +53,7 @@ public class PE046_Goldbachs_other_conjecture {
 		}
 	}
 
-	public static int[] generatePrimes(int max) {
+	private static int[] generatePrimes(int max) {
 		isComposite = new boolean[max + 1];
 
 		for (int i = 2; i * i <= max; i++)
@@ -78,6 +79,7 @@ public class PE046_Goldbachs_other_conjecture {
 				primes[index++] = i;
 			}
 		}
+		
 		return primes;
 	}
 }
