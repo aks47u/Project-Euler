@@ -14,6 +14,7 @@ public class PE048_Self_powers {
 		long start = System.nanoTime();
 
 		BigInteger result = BigInteger.ZERO;
+		
 		for (int i = 1; i <= 1000; i++) {
 			result = result.add(new BigInteger(i + "").pow(i));
 		}
