@@ -23,14 +23,19 @@ public class PE045_Triangular_pentagonal_and_hexagonal {
 		for (; !(a * (a + 1) / 2 == b * (3 * b - 1) / 2 && b * (3 * b - 1) / 2 == c
 				* (2 * c - 1));) {
 			while (a * (a + 1) / 2 < b * (3 * b - 1) / 2
-					|| a * (a + 1) / 2 < c * (2 * c - 1))
+					|| a * (a + 1) / 2 < c * (2 * c - 1)) {
 				a++;
+			}
+			
 			while (b * (3 * b - 1) / 2 < a * (a + 1) / 2
-					|| b * (3 * b - 1) / 2 < c * (2 * c - 1))
+					|| b * (3 * b - 1) / 2 < c * (2 * c - 1)) {
 				b++;
+			}
+			
 			while (c * (2 * c - 1) < b * (3 * b - 1) / 2
-					|| c * (2 * c - 1) < a * (a + 1) / 2)
+					|| c * (2 * c - 1) < a * (a + 1) / 2) {
 				c++;
+			}
 		}
 
 		result = a * (a + 1) / 2;
