@@ -63,13 +63,11 @@ public class PE018_Maximum_path_sum_I {
 			parentLeftSum = 0;
 			parentRightSum = 0;
 
-			// Special case for the first element
 			if (i == 0) {
 				parentLeftSum = arr[i];
 				parentRightSum = arr[i];
 			}
 
-			// Find parents
 			parentLeftIndex = i - currentRow;
 			
 			if (parentLeftIndex >= 0 && parentLeftIndex != i && numCount > 1) {
@@ -91,7 +89,6 @@ public class PE018_Maximum_path_sum_I {
 				v.add(i, new Integer(parentLeftSum));
 			}
 
-			// Handle new rows
 			if (numCount == (last + 1)) {
 				currentRow++;
 				last = numCount;
