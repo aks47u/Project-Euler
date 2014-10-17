@@ -40,7 +40,6 @@ public class PE008_Largest_product_in_a_series {
 					* Integer.parseInt(number.substring(i + 2, i + 3))
 					* Integer.parseInt(number.substring(i + 3, i + 4))
 					* Integer.parseInt(number.substring(i + 4, i + 5));
-
 			result = Math.max(n, result);
 		}
 
