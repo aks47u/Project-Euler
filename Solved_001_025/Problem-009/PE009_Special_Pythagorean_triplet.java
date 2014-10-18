@@ -16,7 +16,7 @@ public class PE009_Special_Pythagorean_triplet {
 		double c = 0.0;
 		int result = 0;
 		
-		for (int a = 0; a < 1000; a++)
+		for (int a = 0; a < 1000; a++) {
 			for (int b = 0; b < 1000; b++) {
 				c = Math.sqrt((a * a) + (b * b));
 				
@@ -25,6 +25,7 @@ public class PE009_Special_Pythagorean_triplet {
 					break;
 				}
 			}
+		}
 
 		long end = System.nanoTime();
 		long runtime = end - start;
