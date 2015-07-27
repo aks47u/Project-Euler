@@ -46,17 +46,20 @@ public class PE051_Prime_digit_replacements {
 			retval += i * mult;
 			mult *= 10;
 		}
+
 		return retval;
 	}
 
 	private static boolean isPrime(int val) {
 		boolean retval = isPrimeImpl(val);
 		assert (verifyPrime(val, retval));
+
 		return retval;
 	}
 
 	private static boolean verifyPrime(int val, boolean retval) {
 		boolean validate = isPrimeBruteImpl(val);
+
 		return validate == retval;
 	}
 
@@ -93,6 +96,7 @@ public class PE051_Prime_digit_replacements {
 	private static void generateAndTry(int tries, int[] template, int start) {
 		if (0 == tries) {
 			actualTry(template, template.length - 1, new int[template.length]);
+
 			return;
 		}
 
@@ -112,6 +116,7 @@ public class PE051_Prime_digit_replacements {
 
 		if (0 == indx) {
 			handleLSD(value, template);
+
 			return;
 		}
 
