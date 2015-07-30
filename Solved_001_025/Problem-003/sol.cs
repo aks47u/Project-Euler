@@ -4,15 +4,15 @@ using System;
 class sol {
 	static void Main(string[] args) {
 		double num = 600851475143;
-        	int result = 0;
+		int result = 0;
 
 		for(int i = 3; i <= Math.Sqrt(num); i += 2) {
 			if(num % i == 0 && isprime(i) == 1) {
-                		result = i;
+				result = i;
 			}
 		}
 
-        	Console.WriteLine(result);
+		Console.WriteLine(result);
 	}
 
 	static int isprime(double p) {
