@@ -1,4 +1,5 @@
 require 'mathn'
+
 num, factor = 600_851_475_143, 0
 primes = Prime.new
 
