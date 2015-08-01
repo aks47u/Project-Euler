@@ -18,25 +18,25 @@ public class PE035_Circular_primes {
 	public static void main(String[] args) {
 		long start = System.nanoTime();
 
-		int n = 10000001;
+		int n = 10000000;
 		boolean[] isprime = new boolean[n + 1];
 		Arrays.fill(isprime, true);
 		isprime[2] = true;
 		isprime[3] = true;
 
-		for (int i = 4; i < n; i += 2) {
+		for (int i = 4; i <= n; i += 2) {
 			isprime[i] = false;
 		}
 
-		for (int i = 3; i < n; i += 2) {
-			for (int j = i + i; j < n; j += i) {
+		for (int i = 3; i <= n; i += 2) {
+			for (int j = i + i; j <= n; j += i) {
 				isprime[j] = false;
 			}
 		}
 
 		int result = 1;
 		
-		for (int i = 3; i < n; i += 2) {
+		for (int i = 3; i <= n; i += 2) {
 			if (isprime[i]) {
 				int pow = 1;
 				int j = i;
