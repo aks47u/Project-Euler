@@ -16,8 +16,7 @@ public class PE036_Double_base_palindromes {
 	public static void main(String[] args) {
 		long start = System.nanoTime();
 
-		String base2;
-		String base10;
+		String base2, base10;
 		int result = 0;
 
 		for (int i = 1; i < 1000000; i += 2) {
