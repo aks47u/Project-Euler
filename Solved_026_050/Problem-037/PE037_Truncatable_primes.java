@@ -50,7 +50,7 @@ public class PE037_Truncatable_primes {
 				+ "ns)");
 	}
 
-	public static boolean isPrime(int number) {
+	private static boolean isPrime(int number) {
 		for (int i = 2; i * i <= number; i++) {
 			if (number % i == 0) {
 				return false;
@@ -60,7 +60,7 @@ public class PE037_Truncatable_primes {
 		return true;
 	}
 
-	public static boolean isTruncatable(int number) {
+	private static boolean isTruncatable(int number) {
 		String string = String.valueOf(number), subString;
 		int length = string.length(), value;
 
