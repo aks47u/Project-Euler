@@ -19,8 +19,8 @@ public class PE039_Integer_right_triangles {
 		int total;
 		int[] perimeter = new int[1000];
 
-		for (int i = 2; i < 22; i++)
-			for (int j = i % 2 + 1; j < i; j += 2)
+		for (int i = 2; i < 22; i++) {
+			for (int j = i % 2 + 1; j < i; j += 2) {
 				if (gcd(i, j) == 1) {
 					a = i * i - j * j;
 					b = 2 * i * j;
@@ -31,6 +31,8 @@ public class PE039_Integer_right_triangles {
 						perimeter[k]++;
 					}
 				}
+			}
+		}
 		
 		int max = -1;
 		int result = -1;
@@ -50,16 +52,6 @@ public class PE039_Integer_right_triangles {
 	}
 
 	private static int gcd(int a, int b) {
-		if (a == 1 || b == 1) {
-			return 1;
-		} else if (a % b == 0) {
-			return b;
-		} else if (b % a == 0) {
-			return a;
-		} else if (a > b) {
-			return gcd(a - (a / b) * b, b);
-		} else {
-			return gcd(a, b - (b / a) * a);
-		}
+		return b == 0 ? a : gcd(b, a % b);
 	}
 }
