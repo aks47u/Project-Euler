@@ -30,8 +30,7 @@ public class PE042_Coded_triangle_numbers {
 		Scanner scn = new Scanner(file);
 		String[] words = scn.nextLine().replaceAll("\"", "").split(",");
 		scn.close();
-		int wordValue;
-		int result = 0;
+		int wordValue, result = 0;
 
 		for (int loop = 0; loop < words.length; loop++) {
 			wordValue = getWordValue(words[loop]);
