@@ -44,7 +44,7 @@ public class PE044_Pentagon_numbers {
 		}
 	}
 
-	public static boolean isPentagonal(int[] pentagonal, int value) {
+	private static boolean isPentagonal(int[] pentagonal, int value) {
 		if (Arrays.binarySearch(pentagonal, value) >= 0) {
 			return true;
 		} else {
