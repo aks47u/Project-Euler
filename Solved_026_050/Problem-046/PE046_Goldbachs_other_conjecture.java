@@ -56,12 +56,13 @@ public class PE046_Goldbachs_other_conjecture {
 	private static int[] generatePrimes(int max) {
 		isComposite = new boolean[max + 1];
 
-		for (int i = 2; i * i <= max; i++)
+		for (int i = 2; i * i <= max; i++) {
 			if (!isComposite[i]) {
 				for (int j = i; i * j <= max; j++) {
 					isComposite[i * j] = true;
 				}
 			}
+		}
 
 		int numPrimes = 0;
 
