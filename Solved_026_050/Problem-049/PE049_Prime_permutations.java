@@ -19,7 +19,7 @@ import java.util.Vector;
  * sequence?
  */
 public class PE049_Prime_permutations {
-	static ArrayList<Integer> h = new ArrayList<Integer>();
+	private static ArrayList<Integer> h = new ArrayList<Integer>();
 
 	public static void main(String[] arg) {
 		long start = System.nanoTime();
@@ -32,6 +32,7 @@ public class PE049_Prime_permutations {
 
 		for (int i = 0; i < h.size(); i++) {
 			int N = Integer.parseInt("" + h.get(i));
+
 			if (number(N) == 3) {
 				view(N);
 			}
