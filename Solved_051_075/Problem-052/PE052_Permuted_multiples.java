@@ -25,6 +25,7 @@ public class PE052_Permuted_multiples {
 								long runtime = end - start;
 								System.out.println("Runtime: " + runtime
 										/ 1000000 + "ms (" + runtime + "ns)");
+
 								return;
 							}
 						}
