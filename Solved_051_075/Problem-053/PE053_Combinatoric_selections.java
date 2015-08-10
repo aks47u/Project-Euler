@@ -24,6 +24,7 @@ public class PE053_Combinatoric_selections {
 
 		int result = 0;
 		int millionMinimum = 10;
+
 		for (int n = 23; n < 101; n++) {
 			while (nCr(n, --millionMinimum) > 1000000)
 				;
