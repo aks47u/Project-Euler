@@ -101,8 +101,6 @@ public class PE054_Poker_hands {
 			r[card / 5] |= cardCode(cards[card]);
 		}
 
-		assert (Long.bitCount(r[0]) == 5);
-		assert (Long.bitCount(r[1]) == 5);
 		return r;
 	}
 
@@ -260,24 +258,26 @@ public class PE054_Poker_hands {
 		for (int value = 2; value <= 14; value++) {
 			long slot = hand >> 4 * (value - 2) & 15;
 
-		if (slot == 0b0111 || slot == 0b1011 || slot == 0b1101
+			if (slot == 0b0111 || slot == 0b1011 || slot == 0b1101
 				|| slot == 0b1110) {
-			return value;
+				return value;
+			}
 		}
-		}
+
 		return 0;
 	}
 
 	private static int twoPairs(long hand) {
 		int pairs = 0;
 		int resultValue = 0;
+
 		for (int value = 14; value >= 2; value--) {
 			long slot = hand >> 4 * (value - 2) & 15;
 
-		if (Long.bitCount(slot) == 2) {
-			resultValue = resultValue * 100 + value;
-			pairs++;
-		}
+			if (Long.bitCount(slot) == 2) {
+				resultValue = resultValue * 100 + value;
+				pairs++;
+			}
 		}
 
 		return pairs == 2 ? resultValue : 0;
@@ -291,11 +291,11 @@ public class PE054_Poker_hands {
 		for (int value = 2; value <= 14; value++) {
 			long slot = hand >> 4 * (value - 2) & 15;
 
-		if (slot != 0) {
-			result += value * pot;
-			check = (check << 4) | slot;
-			pot *= 16;
-		}
+			if (slot != 0) {
+				result += value * pot;
+				check = (check << 4) | slot;
+				pot *= 16;
+			}
 		}
 
 		while ((check & 1) == 0) {
@@ -317,9 +317,9 @@ public class PE054_Poker_hands {
 			value++;
 			slot = hand >> 4 * (value - 2) & 15;
 
-		if (slot == 0) {
-			return 0;
-		}
+			if (slot == 0) {
+				return 0;
+			}
 		}
 
 		return value;
@@ -351,6 +351,7 @@ public class PE054_Poker_hands {
 				result = result * 16 + value;
 			}
 		}
+
 		return result;
 	}
 
