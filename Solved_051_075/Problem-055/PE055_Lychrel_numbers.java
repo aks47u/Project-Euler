@@ -41,10 +41,12 @@ public class PE055_Lychrel_numbers {
 		long start = System.nanoTime();
 
 		int result = 0;
+
 		for (int i = 195; i < 10000; i++) {
 			StringBuffer sb;
 			String s;
 			BigInteger next = new BigInteger(new Integer(i).toString());
+
 			for (int j = 0; j < 50; j++) {
 				BigInteger rev = new BigInteger(new StringBuffer(
 						next.toString()).reverse().toString());
