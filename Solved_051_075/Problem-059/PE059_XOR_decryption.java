@@ -67,13 +67,16 @@ public class PE059_XOR_decryption {
 
 		cipher = new int[items.length];
 		plain = new int[items.length];
+
 		for (int i = 0; i < items.length; i++) {
 			cipher[i] = readInt(items[i]);
 		}
+
 		for (key[0] = 'a'; key[0] <= 'z'; key[0]++) {
 			for (key[1] = 'a'; key[1] <= 'z'; key[1]++) {
 				for (key[2] = 'a'; key[2] <= 'z'; key[2]++) {
 					decrypt(cipher, key, plain);
+
 					if (isSufficientlyAlphabetical(plain)) {
 						writeResult(key, plain);
 						System.exit(0);
