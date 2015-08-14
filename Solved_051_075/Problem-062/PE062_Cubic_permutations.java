@@ -54,7 +54,7 @@ public class PE062_Cubic_permutations {
 		}
 	}
 
-	public static int occurencesInLong(long number, long digit) {
+	private static int occurencesInLong(long number, long digit) {
 		String strNumber = String.valueOf(number);
 		int count = 0;
 
