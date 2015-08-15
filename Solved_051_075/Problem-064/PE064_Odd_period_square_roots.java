@@ -109,6 +109,7 @@ public class PE064_Odd_period_square_roots {
 
 	public int sContRoot(int n) {
 		contRoot(n);
+
 		return k;
 	}
 
