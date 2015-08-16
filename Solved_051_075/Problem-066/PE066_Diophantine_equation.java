@@ -78,6 +78,7 @@ public class PE066_Diophantine_equation {
 		}
 
 		num = num.add(denom.multiply(BigInteger.valueOf(f)));
+
 		return num;
 	}
 
@@ -99,7 +100,6 @@ public class PE066_Diophantine_equation {
 			a = c;
 			b = e;
 			terms[nTerms++] = d;
-
 		} while (!(a == startA && b == startB));
 
 		int[] termsFit = new int[nTerms];
