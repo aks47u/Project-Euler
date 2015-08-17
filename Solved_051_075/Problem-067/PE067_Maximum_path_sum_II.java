@@ -30,13 +30,10 @@ public class PE067_Maximum_path_sum_II {
 	public static void main(String[] args) throws FileNotFoundException {
 		long start = System.nanoTime();
 
-		int[][] rowNumber;
-		String[][] rowString;
 		File fi = new File("PE067_triangle.txt");
 		Scanner scn = new Scanner(fi);
-
-		rowNumber = new int[100][];
-		rowString = new String[100][];
+		int[][] rowNumber = new int[100][];
+		String[][] rowString new String[100][];
 
 		for (int row = 0; row < 100; row++) {
 			rowNumber[row] = new int[row + 1];
@@ -51,7 +48,7 @@ public class PE067_Maximum_path_sum_II {
 
 		for (int row = 98; row >= 0; row--) {
 			for (int col = 0; col < row + 1; col++) {
-				rowNumber[row][col] += max(rowNumber[row + 1][col],
+				rowNumber[row][col] += Math.max(rowNumber[row + 1][col],
 						rowNumber[row + 1][col + 1]);
 			}
 		}
@@ -61,9 +58,5 @@ public class PE067_Maximum_path_sum_II {
 		System.out.println(rowNumber[0][0]);
 		System.out.println("Runtime: " + runtime / 1000000 + "ms (" + runtime
 				+ "ns)");
-	}
-
-	private static int max(int num1, int num2) {
-		return (num1 > num2) ? num1 : num2;
 	}
 }
