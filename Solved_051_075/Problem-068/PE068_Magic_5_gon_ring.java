@@ -122,6 +122,7 @@ public class PE068_Magic_5_gon_ring {
 							}
 
 							int min = 5;
+
 							for (int i = 6; i < 10; i++) {
 								if (a[i] < a[min]) {
 									min = i;
