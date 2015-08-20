@@ -30,7 +30,7 @@ public class PE070_Totient_permutation {
 				+ "ns)");
 	}
 
-	public static int solve(int n) {
+	private static int solve(int n) {
 		double[] phi = new double[n + 1];
 		
 		for (int i = 1; i <= n; ++i) {
@@ -45,7 +45,7 @@ public class PE070_Totient_permutation {
 			}
 		}
 
-		double min = 79_180D;
+		double min = 79180.0;
 		int k = 0;
 
 		for (int i = 2; i <= n; ++i) {
