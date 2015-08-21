@@ -40,11 +40,9 @@ public class PE074_Digit_factorial_chains {
 
 		int[] counts = new int[1000000];
 		Arrays.fill(counts, 0);
-
 		counts[0] = 2;
 		counts[1] = 1;
 		counts[2] = 1;
-
 		int[] facts = { 1, 1, 2, 6, 24, 120, 720, 5040, 40320, 362880 };
 		int result = 0;
 		HashSet<Integer> chain;
