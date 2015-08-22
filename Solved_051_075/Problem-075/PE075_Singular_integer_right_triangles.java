@@ -62,7 +62,7 @@ public class PE075_Singular_integer_right_triangles {
 				+ "ns)");
 	}
 
-	public static void increase(int n) {
+	private static void increase(int n) {
 		if (n == 0) {
 			return;
 		}
@@ -72,19 +72,11 @@ public class PE075_Singular_integer_right_triangles {
 		}
 	}
 
-	public static int gcd(int m, int n) {
-		if (n > m) {
-			return gcd(n, m);
-		}
-
-		if (m % n == 0) {
-			return n;
-		}
-
-		return gcd(n, m - n * (m / n));
+	private static int gcd(int m, int n) {
+		return n == 0 ? m : gcd(n, m % n);
 	}
 
-	public static int sumTriple(int m, int n) {
+	private static int sumTriple(int m, int n) {
 		if (n > m) {
 			return sumTriple(n, m);
 		}
