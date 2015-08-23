@@ -140,15 +140,14 @@ public class PE077_Prime_summations {
 
 		if (sumSoFar == targetSum) {
 			totalCount++;
+
 			return;
 		}
 
 		for (int k = lastUsedPrimeInd; primes[k] + sumSoFar <= targetSum; k++) {
 			arr[arr_len[0]] = primes[k];
 			arr_len[0]++;
-
 			put_next(arr, arr_len, sumSoFar + primes[k], targetSum, k);
-
 			arr[arr_len[0] - 1] = 0;
 			arr_len[0]--;
 		}
