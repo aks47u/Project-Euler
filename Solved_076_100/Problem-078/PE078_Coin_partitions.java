@@ -104,6 +104,7 @@ public class PE078_Coin_partitions {
 		}
 
 		pp[n] = sum;
+
 		return pp[n];
 	}
 }
