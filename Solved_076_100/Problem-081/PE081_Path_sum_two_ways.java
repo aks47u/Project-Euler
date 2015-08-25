@@ -30,7 +30,6 @@ public class PE081_Path_sum_two_ways {
 
 		matrixString = new String[80][80];
 		matrix = new int[82][82];
-
 		File file = new File("PE081_matrix.txt");
 		Scanner scn = new Scanner(file);
 
@@ -44,7 +43,6 @@ public class PE081_Path_sum_two_ways {
 		}
 
 		scn.close();
-
 		int row, col;
 
 		for (int startCol = 79; startCol > 0; startCol--) {
