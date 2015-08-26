@@ -28,7 +28,7 @@ import java.io.IOException;
  */
 public class PE082_Path_sum_three_ways {
 	int[][] matrix, minSummary;
-	String[][] stepFrom; // For finding the minimal sum path
+	String[][] stepFrom;
 	int totalX, totalY;
 
 	public static void main(String[] args) {
