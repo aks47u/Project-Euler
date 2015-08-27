@@ -44,8 +44,8 @@ public class PE083_Path_sum_four_ways {
 		}
 		
 		data.close();
-
 		assignArray(listData.size());
+
 		for (int index = 0, row_counter = 0; index <= listData.size() - 1; ++index, row_counter++) {
 			populateArray(listData.get(index), row_counter);
 		}
