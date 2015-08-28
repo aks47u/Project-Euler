@@ -68,14 +68,9 @@ import java.util.Random;
  * six-digit modal string.
  */
 public class PE084_Monopoly_odds {
-	private static int[] squares = new int[40]; // squares[i] is the number of
-	// times the ith square is
-	// visited in a simulation
+	private static int[] squares = new int[40];
 	private static Random generator = new Random();
-	// simulate drawing a community chest card
-	private static int cc = 0;
-	// simulate drawing a chance card
-	private static int ch = 0;
+	private static int cc = 0, ch = 0;
 
 	public static void main(String[] args) {
 		long start = System.nanoTime();
@@ -108,7 +103,6 @@ public class PE084_Monopoly_odds {
 				+ "ns)");
 	}
 
-	// simulate the roll of a die
 	private static int roll() {
 		return generator.nextInt(4) + 1;
 	}
@@ -116,12 +110,15 @@ public class PE084_Monopoly_odds {
 	private static int getCommunityChest(int current) {
 		if (cc == 0) {
 			cc = (cc + 1) % 16;
+
 			return 0;
 		} else if (cc == 1) {
 			cc = (cc + 1) % 16;
+
 			return 10;
 		} else {
 			cc = (cc + 1) % 16;
+
 			return current;
 		}
 	}
@@ -129,21 +126,27 @@ public class PE084_Monopoly_odds {
 	private static int getChance(int current) {
 		if (ch == 0) {
 			ch = (ch + 1) % 16;
+
 			return 0;
 		} else if (ch == 1) {
 			ch = (ch + 1) % 16;
+
 			return 10;
 		} else if (ch == 2) {
 			ch = (ch + 1) % 16;
+
 			return 11;
 		} else if (ch == 3) {
 			ch = (ch + 1) % 16;
+
 			return 24;
 		} else if (ch == 4) {
 			ch = (ch + 1) % 16;
+
 			return 39;
 		} else if (ch == 5) {
 			ch = (ch + 1) % 16;
+
 			return 5;
 		} else if (ch == 6 || ch == 7) {
 			ch = (ch + 1) % 16;
@@ -156,7 +159,7 @@ public class PE084_Monopoly_odds {
 			case 36:
 				return 5;
 			default:
-				return 0; // never executes
+				return 0;
 			}
 		} else if (ch == 8) {
 			ch = (ch + 1) % 16;
@@ -168,7 +171,7 @@ public class PE084_Monopoly_odds {
 			case 22:
 				return 28;
 			default:
-				return 0; // never executes
+				return 0;
 			}
 		} else if (ch == 9) {
 			int next = (current - 3 + 40) % 40;
@@ -181,12 +184,14 @@ public class PE084_Monopoly_odds {
 			return next;
 		} else {
 			ch = (ch + 1) % 16;
+
 			return current;
 		}
 	}
 
 	private static void playGame(long nmoves) {
 		int current = 0, doubles = 0;
+
 		for (long i = 1; i <= nmoves; i++) {
 			int r1 = roll(), r2 = roll();
 
