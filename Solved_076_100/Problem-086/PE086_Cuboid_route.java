@@ -46,8 +46,9 @@ public class PE086_Cuboid_route {
 				+ "ns)");
 	}
 
-	public static boolean isOk(long x, long sum_y_z) {
+	private static boolean isOk(long x, long sum_y_z) {
 		double d = Math.sqrt(x * x + sum_y_z * sum_y_z);
+
 		return d == (long) d;
 	}
 }
