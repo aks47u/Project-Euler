@@ -106,12 +106,10 @@ public class PE087_Prime_power_triples {
 
 		int result = 0;
 		int N, c1, c2, p3_2;
-
 		int Max = 50000000;
 		int m_p1 = (int) Math.sqrt(Max - 8 - 16);
 		int m_p2 = (int) Math.pow(Max - 4 - 16, 1 / 3.0);
 		int m_p3 = (int) Math.pow(Max - 4 - 8, 0.25);
-
 		HashMap<Integer, Integer> map = new HashMap<Integer, Integer>();
 
 		for (int p1 : primes) {
