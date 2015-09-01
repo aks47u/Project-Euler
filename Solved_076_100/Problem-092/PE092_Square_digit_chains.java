@@ -25,6 +25,7 @@ public class PE092_Square_digit_chains {
 		long start = System.nanoTime();
 
 		int result = 0;
+
 		for (int i = 1; i < 10000000; i++) {
 			int invalue = arrivesAt(i);
 
