@@ -48,10 +48,9 @@ public class PE093_Arithmetic_expressions {
 				list.add((double) i);
 			}
 
-			Set<List<Double>> bigSet = reduce(list); // size 3
-			bigSet = reduce(bigSet); // size 2
-			bigSet = reduce(bigSet); // size 1
-
+			Set<List<Double>> bigSet = reduce(list);
+			bigSet = reduce(bigSet);
+			bigSet = reduce(bigSet);
 			Set<Integer> finalList = new TreeSet<Integer>();
 
 			for (List<Double> l : bigSet) {
@@ -71,6 +70,7 @@ public class PE093_Arithmetic_expressions {
 			if (i - 1 > maxConsec) {
 				maxConsec = i - 1;
 				result = "";
+
 				for (int j = 0; j < nums.length; j++) {
 					result += nums[j];
 				}
