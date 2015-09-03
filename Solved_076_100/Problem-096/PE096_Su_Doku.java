@@ -106,6 +106,7 @@ public class PE096_Su_Doku {
 
 				if (solve(i, j + 1)) {
 					unset(i, j, dg);
+
 					return true;
 				}
 
