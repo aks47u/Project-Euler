@@ -50,6 +50,7 @@ public class PE098_Anagramic_squares {
 
 		for (int i = 0; i < wds.size(); i++) {
 			char[] ca1 = wdsarr.get(i);
+
 			for (int j = i + 1; j < wds.size(); j++) {
 				char[] ca2 = wdsarr.get(j);
 
@@ -123,7 +124,6 @@ public class PE098_Anagramic_squares {
 	}
 
 	private static String translate(String a, String b, String c) {
-		// Assumes lengths, patterns are all equal a=>b, c=>?
 		HashMap<Character, Character> map = new HashMap<Character, Character>();
 
 		for (int i = 0; i < a.length(); i++) {
