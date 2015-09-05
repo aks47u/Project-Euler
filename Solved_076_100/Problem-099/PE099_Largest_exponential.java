@@ -43,6 +43,7 @@ public class PE099_Largest_exponential {
 					result = n;
 				}
 			}
+
 			reader.close();
 		} catch (Exception ex) {
 			ex.printStackTrace();
@@ -59,6 +60,7 @@ public class PE099_Largest_exponential {
 		String[] tokens = line.split(",");
 		int base = Integer.parseInt(tokens[0]);
 		int exp = Integer.parseInt(tokens[1]);
+
 		return exp * Math.log10(base);
 	}
 }
