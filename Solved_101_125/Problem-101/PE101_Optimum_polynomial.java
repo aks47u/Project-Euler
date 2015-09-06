@@ -108,6 +108,7 @@ public class PE101_Optimum_polynomial {
 			for (int j = i + 1; j < values.length; j++) {
 				BigInteger mult = values[j][i].divide(values[i][i]).multiply(
 						MINUS_ONE);
+
 				if ((mult.multiply(values[i][i]).compareTo(
 						values[j][i].multiply(MINUS_ONE)) == 0) ^ true) {
 					mult = values[j][i].multiply(MINUS_ONE);
