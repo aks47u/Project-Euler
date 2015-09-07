@@ -83,7 +83,7 @@ public class PE102_Triangle_containment {
 		return Math.sqrt(s * (s - a) * (s - b) * (s - c)); // Heron's formula
 	}
 
-	public static double round(double unrounded, int precision, int roundingMode) {
+	private static double round(double unrounded, int precision, int roundingMode) {
 		BigDecimal bd = new BigDecimal(unrounded);
 		BigDecimal rounded = bd.setScale(precision, roundingMode);
 
