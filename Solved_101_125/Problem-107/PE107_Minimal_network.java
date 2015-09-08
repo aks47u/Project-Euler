@@ -49,6 +49,7 @@ public class PE107_Minimal_network {
 
 			while ((line = reader.readLine()) != null) {
 				String[] raw = line.split(",");
+
 				for (int i = 0; i < raw.length; i++) {
 					if (raw[i].equals("-")) {
 						graph[j][i] = max;
@@ -56,8 +57,10 @@ public class PE107_Minimal_network {
 						graph[j][i] = Integer.parseInt(raw[i]);
 					}
 				}
+
 				j++;
 			}
+
 			reader.close();
 		} catch (Exception ex) {
 			ex.printStackTrace();
