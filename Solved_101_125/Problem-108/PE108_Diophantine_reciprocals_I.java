@@ -47,6 +47,7 @@ public class PE108_Diophantine_reciprocals_I {
 			if (count > 1000) {
 				break;
 			}
+
 			result += 2 * 3 * 5 * 7;
 		}
 
