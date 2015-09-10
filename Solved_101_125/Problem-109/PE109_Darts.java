@@ -80,7 +80,7 @@ public class PE109_Darts {
 				+ "ns)");
 	}
 
-	public static int val(int n) {
+	private static int val(int n) {
 		if (n <= 20) {
 			return n;
 		}
@@ -102,13 +102,5 @@ public class PE109_Darts {
 		}
 
 		return -1;
-	}
-
-	public boolean isDouble(int n) {
-		if (n > 20 && n <= 40) {
-			return true;
-		}
-
-		return false;
 	}
 }
