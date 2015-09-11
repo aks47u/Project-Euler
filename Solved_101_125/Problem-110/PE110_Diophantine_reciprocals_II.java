@@ -72,6 +72,7 @@ public class PE110_Diophantine_reciprocals_II {
 					result = n.toString();
 				}
 			}
+
 			return;
 		}
 
