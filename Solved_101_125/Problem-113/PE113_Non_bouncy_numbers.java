@@ -46,6 +46,7 @@ public class PE113_Non_bouncy_numbers {
 			}
 
 			long sum = 0;
+
 			for (int j = 0; j < 10; j++) {
 				sum += sums1[j];
 			}
