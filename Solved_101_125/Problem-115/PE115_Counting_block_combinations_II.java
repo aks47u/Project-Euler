@@ -39,6 +39,7 @@ public class PE115_Counting_block_combinations_II {
 			sum = 0;
 			block(n);
 			sumval[n] = sum;
+
 			if (sum > 1000000) {
 				result = n;
 				break;
