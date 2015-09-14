@@ -41,12 +41,10 @@ public class PE118_Pandigital_prime_sets {
 	private static boolean isPrime(int num) {
 		if (num == 2) {
 			return true;
-
 		}
 
 		if (((num % 2) == 0) || num < 2) {
 			return false;
-
 		}
 
 		for (int t = 3; t * t <= num; t += 2) {
