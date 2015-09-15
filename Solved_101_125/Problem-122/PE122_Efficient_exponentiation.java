@@ -66,10 +66,9 @@ public class PE122_Efficient_exponentiation {
 							result += generation;
 						}
 						
-						if (m[a + b] == generation)
-							{
+						if (m[a + b] == generation) {
 							nextgen.add(child);
-							}
+						}
 					}
 				}
 			}
