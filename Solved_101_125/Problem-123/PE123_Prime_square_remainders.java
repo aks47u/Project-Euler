@@ -43,12 +43,12 @@ public class PE123_Prime_square_remainders {
 				+ "ns)");
 	}
 
-	public static ArrayList<Long> primes() {
+	private static ArrayList<Long> primes() {
 		ArrayList<Long> p = new ArrayList<Long>();
-		p.add(2l);
-		p.add(3l);
-		p.add(5l);
-		p.add(7l);
+		p.add(2L);
+		p.add(3L);
+		p.add(5L);
+		p.add(7L);
 
 		for (long i = 11; i < 250000; i += 2) {
 			if (isPrime(i)) {
@@ -59,7 +59,7 @@ public class PE123_Prime_square_remainders {
 		return p;
 	}
 
-	public static int prymes() {
+	private static int prymes() {
 		int count = 4;
 
 		for (int i = 11; i < 50000000; i += 2) {
@@ -71,7 +71,7 @@ public class PE123_Prime_square_remainders {
 		return count;
 	}
 
-	public static ArrayList<Integer> erast() {
+	private static ArrayList<Integer> erast() {
 		ArrayList<Integer> a = new ArrayList<Integer>();
 
 		for (int i = 3; i < 50000000; i += 2) {
@@ -81,7 +81,7 @@ public class PE123_Prime_square_remainders {
 		return a;
 	}
 
-	public static boolean isPrime(long n) {
+	private static boolean isPrime(long n) {
 		int b = (int) Math.sqrt(n);
 
 		for (int i = 3; i <= b; i += 2) {
