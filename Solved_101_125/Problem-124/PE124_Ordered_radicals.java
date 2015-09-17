@@ -1,5 +1,7 @@
 package Solved_101_125;
 
+import java.util.Arrays;
+
 /**
  * Ordered radicals
  * Problem 124
@@ -95,7 +97,7 @@ public class PE124_Ordered_radicals {
 			hArray[i].radn = rad;
 		}
 
-		java.util.Arrays.sort(hArray);
+		Arrays.sort(hArray);
 
 		long end = System.nanoTime();
 		long runtime = end - start;
@@ -110,6 +112,7 @@ public class PE124_Ordered_radicals {
 
 		public int compareTo(Object ho) {
 			holder h = (holder) ho;
+
 			if (radn < h.radn) {
 				return -1;
 			}
