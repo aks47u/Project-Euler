@@ -88,23 +88,23 @@ public class PE127_abc_hits {
 		}
 
 		int lim_2 = lim >> 1;
-			eadj = new int[lim_2 + 1];
-			eprev = new int[lim_2 + 1];
-			elast = new int[lim_2 + 1];
-			eidx = 0;
+		eadj = new int[lim_2 + 1];
+		eprev = new int[lim_2 + 1];
+		elast = new int[lim_2 + 1];
+		eidx = 0;
 
-			for (int i = lim_2; i >= 1; i--) {
-				addEdge(rad[i], i);
+		for (int i = lim_2; i >= 1; i--) {
+			addEdge(rad[i], i);
+		}
+
+		radList = new int[lim_2 + 1];
+		ridx = 0;
+
+		for (int i = 1; i < lim_2; i++) {
+			if (elast[i] != 0) {
+				radList[ridx++] = rad[i];
 			}
-
-			radList = new int[lim_2 + 1];
-			ridx = 0;
-
-			for (int i = 1; i < lim_2; i++) {
-				if (elast[i] != 0) {
-					radList[ridx++] = rad[i];
-				}
-			}
+		}
 	}
 
 	private static void addEdge(int a, int b) {
