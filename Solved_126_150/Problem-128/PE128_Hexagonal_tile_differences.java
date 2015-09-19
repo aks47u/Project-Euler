@@ -65,7 +65,7 @@ public class PE128_Hexagonal_tile_differences {
 				+ "ns)");
 	}
 
-	public static void numbersAround(int x, int y, long[] nums) {
+	private static void numbersAround(int x, int y, long[] nums) {
 		nums[0] = valueFor(x, y + 1);
 		nums[1] = valueFor(x - 1, y);
 		nums[2] = valueFor(x - 1, y - 1);
@@ -74,7 +74,7 @@ public class PE128_Hexagonal_tile_differences {
 		nums[5] = valueFor(x + 1, y + 1);
 	}
 
-	public static int PD(int x, int y, long[] nums) {
+	private static int PD(int x, int y, long[] nums) {
 		long n = valueFor(x, y);
 		numbersAround(x, y, nums);
 		int count = 0;
@@ -94,7 +94,7 @@ public class PE128_Hexagonal_tile_differences {
 		return count;
 	}
 
-	public static long topNForRing(long r) {
+	private static long topNForRing(long r) {
 		if (r == 0) {
 			return 1;
 		}
@@ -102,7 +102,7 @@ public class PE128_Hexagonal_tile_differences {
 		return 3 * r * r - 3 * r + 2;
 	}
 
-	public static long valueFor(int x, int y) {
+	private static long valueFor(int x, int y) {
 		if (x == 0 && y == 0) {
 			return 1;
 		}
@@ -138,10 +138,9 @@ public class PE128_Hexagonal_tile_differences {
 		} else {
 			return -1;
 		}
-
 	}
 
-	public static int ringFor(int x, int y) {
+	private static int ringFor(int x, int y) {
 		char region = regionFor(x, y);
 
 		if (region == 'A') {
@@ -173,14 +172,13 @@ public class PE128_Hexagonal_tile_differences {
 		return -1;
 	}
 
-	public static char regionFor(int x, int y) {
+	private static char regionFor(int x, int y) {
 		if (x == 0) {
 			if (y >= 0) {
 				return 'A';
 			} else {
 				return 'G';
 			}
-
 		} else if (y == 0) {
 			if (x < 0) {
 				return 'C';
