@@ -35,7 +35,7 @@ public class PE129_Repunit_divisibility {
 				+ "ns)");
 	}
 
-	public static int calcA(int p) {
+	private static int calcA(int p) {
 		for (int a = 1, q = 1; true; a++) {
 			if (q == 0) {
 				return a;
