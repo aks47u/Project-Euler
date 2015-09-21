@@ -15,8 +15,8 @@ package Solved_126_150;
  * How many primes below one million have this remarkable property?
  */
 public class PE131_Prime_cube_partnership {
-	private static int MAX_N = 1000000;
-	private static int MAX_CNT_PRIMES = 300000;
+	private static final int MAX_N = 1000000;
+	private static final int MAX_CNT_PRIMES = 300000;
 	private static int cnt_primes = 0;
 	private static int[] ind_prime = new int[MAX_N + 1];
 	private static int[] primes = new int[MAX_CNT_PRIMES + 1];
