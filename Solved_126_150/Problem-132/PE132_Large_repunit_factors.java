@@ -42,7 +42,7 @@ public class PE132_Large_repunit_factors {
 				+ "ns)");
 	}
 
-	public static boolean isPrime(int n) {
+	private static boolean isPrime(int n) {
 		if (n < 2) {
 			return false;
 		}
