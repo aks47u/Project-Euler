@@ -38,7 +38,7 @@ public class PE133_Repunit_nonfactors {
 				+ "ns)");
 	}
 
-	public static boolean isPrime(int n) {
+	private static boolean isPrime(int n) {
 		if (n <= 1) {
 			return false;
 		}
@@ -56,7 +56,7 @@ public class PE133_Repunit_nonfactors {
 		return true;
 	}
 
-	public static boolean modPow(int d) {
+	private static boolean modPow(int d) {
 		if (BigInteger.TEN.modPow(BigInteger.TEN.pow(100),
 				BigInteger.valueOf(d)).compareTo(BigInteger.ONE) == 0) {
 			return true;
