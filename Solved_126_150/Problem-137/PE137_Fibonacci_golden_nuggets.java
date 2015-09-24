@@ -15,11 +15,11 @@ package Solved_126_150;
  * The corresponding values of x for the first five natural numbers are shown
  * below.
  * x			AF(x)
- * sqrt2-1			1
+ * sqrt2-1		1
  * 1/2			2
- * (sqrt13-2)/3	3
- * (sqrt89-5)/8	4
- * (sqrt34-3)/5	5
+ * (sqrt13-2)/3		3
+ * (sqrt89-5)/8		4
+ * (sqrt34-3)/5		5
  * 
  * We shall call AF(x) a golden nugget if x is rational, because they become
  * increasingly rarer; for example, the 10th golden nugget is 74049690.
@@ -53,7 +53,7 @@ public class PE137_Fibonacci_golden_nuggets {
 				+ "ns)");
 	}
 
-	public static long sqrt(long x) {
+	private static long sqrt(long x) {
 		return Math.round(Math.exp(Math.log(x) * .5));
 	}
 }
