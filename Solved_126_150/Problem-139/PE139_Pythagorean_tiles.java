@@ -25,7 +25,7 @@ public class PE139_Pythagorean_tiles {
 
 		int result = 0;
 
-		for (int i = 1; i < 20000; i++)
+		for (int i = 1; i < 20000; i++) {
 			for (int j = i + 1; j < 20000; j++) {
 				int a = j * j - i * i;
 				int b = 2 * i * j;
@@ -48,6 +48,7 @@ public class PE139_Pythagorean_tiles {
 
 				result += 99999999 / sum;
 			}
+		}
 
 		long end = System.nanoTime();
 		long runtime = end - start;
@@ -57,10 +58,6 @@ public class PE139_Pythagorean_tiles {
 	}
 
 	private static int gcd(int a, int b) {
-		if (a < b) {
-			return gcd(b, a);
-		}
-		
 		return (a % b == 0) ? b : gcd(b, a % b);
 	}
 }
