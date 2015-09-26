@@ -14,10 +14,10 @@ package Solved_126_150;
  * The corresponding values of x for the first five natural numbers are shown
  * below.
  * x				AG(x)
- * (sqrt5-1)/4		1
+ * (sqrt5-1)/4			1
  * 2/5				2
- * (sqrt22-2)/6		3
- * (sqrt137-5)/14	4
+ * (sqrt22-2)/6			3
+ * (sqrt137-5)/14		4
  * 1/2				5
  * 
  * We shall call AG(x) a golden nugget if x is rational, because they become
@@ -34,7 +34,6 @@ public class PE140_Modified_Fibonacci_golden_nuggets {
 		long[] q = { 1, 2, 5, 7, 14, 19 };
 		long[] r = { 9, 9, 9, 9, 9, 9 };
 		long[] s = { 4, 4, 4, 4, 4, 4 };
-
 		int count = 5;
 		long result = 2 + 5 + 21 + 42 + 152;
 		boolean b = true;
