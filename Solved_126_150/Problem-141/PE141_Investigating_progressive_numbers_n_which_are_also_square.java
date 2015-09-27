@@ -58,10 +58,6 @@ public class PE141_Investigating_progressive_numbers_n_which_are_also_square {
 	}
 
 	private static long gcd(long a, long b) {
-		if (a < b) {
-			return gcd(b, a);
-		}
-
 		return (a % b == 0) ? b : gcd(b, a % b);
 	}
 
