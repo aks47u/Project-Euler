@@ -99,7 +99,7 @@ public class PE143_Investigating_the_Torricelli_point_of_a_triangle {
 				+ "ns)");
 	}
 
-	public static long mcd(long x, long y) {
+	private static long mcd(long x, long y) {
 		while (y != 0) {
 			long tmp = y;
 			y = x % y;
