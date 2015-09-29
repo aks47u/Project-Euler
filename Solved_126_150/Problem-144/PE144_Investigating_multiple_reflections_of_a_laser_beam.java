@@ -39,8 +39,8 @@ package Solved_126_150;
  * before exiting?
  */
 public class PE144_Investigating_multiple_reflections_of_a_laser_beam {
-	public static final double EPS = .0001;
-	public static final int INF = Integer.MAX_VALUE >> 2;
+	private static final double EPS = .0001;
+	private static final int INF = Integer.MAX_VALUE >> 2;
 
 	public static void main(String[] args) {
 		long start = System.nanoTime();
