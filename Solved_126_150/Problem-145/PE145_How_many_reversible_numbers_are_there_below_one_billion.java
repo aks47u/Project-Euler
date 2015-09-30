@@ -32,11 +32,11 @@ public class PE145_How_many_reversible_numbers_are_there_below_one_billion {
 				+ "ns)");
 	}
 
-	public static boolean hasZero(int n) {
+	private static boolean hasZero(int n) {
 		return Integer.toString(n).charAt(Integer.toString(n).length() - 1) == '0';
 	}
 
-	public static boolean isOdd(int n) {
+	private static boolean isOdd(int n) {
 		int temp = 0;
 
 		while (n > 0) {
@@ -51,7 +51,7 @@ public class PE145_How_many_reversible_numbers_are_there_below_one_billion {
 		return true;
 	}
 
-	public static int reverse(int n) {
+	private static int reverse(int n) {
 		int reversedNumber = 0;
 		int temp = 0;
 
