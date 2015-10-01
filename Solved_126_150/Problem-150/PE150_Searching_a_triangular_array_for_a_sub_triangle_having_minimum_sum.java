@@ -81,11 +81,11 @@ public class PE150_Searching_a_triangular_array_for_a_sub_triangle_having_minimu
 				+ "ns)");
 	}
 
-	public static long get(int row, int col) {
+	private static long get(int row, int col) {
 		return s[(row) * (row - 1) / 2 + col + 1];
 	}
 
-	public static long pow(long a, long b) {
+	private static long pow(long a, long b) {
 		int result = 1;
 
 		for (int i = 1; i <= b; i++) {
