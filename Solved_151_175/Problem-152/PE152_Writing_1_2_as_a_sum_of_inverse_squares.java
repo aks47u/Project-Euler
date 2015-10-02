@@ -20,15 +20,12 @@ import java.util.Arrays;
  * using distinct integers between 2 and 80 inclusive?
  */
 public class PE152_Writing_1_2_as_a_sum_of_inverse_squares {
-	private static int L = 80;
-	private static int[] ps;
+	private static int L = 80, rL = (int) Math.round(Math.sqrt(L));
+	private static int[] ps, sort;
 	private static int[] base = new int[L + 1];
 	private static int[] have = new int[L + 2];
 	private static int[][][] f = new int[L + 1][][];
 	private static boolean[] used = new boolean[L + 1];
-	private static int[] sort;
-
-	private static int rL = (int) Math.round(Math.sqrt(L));
 	private static boolean[] prime = new boolean[L + 1];
 	private static long result = 0;
 
@@ -50,7 +47,7 @@ public class PE152_Writing_1_2_as_a_sum_of_inverse_squares {
 
 		Arrays.fill(used, false);
 		Arrays.fill(have, 0);
-		have[2] = 2; // start with 2 / (2^2) = 1/2
+		have[2] = 2;
 		int w = 0;
 
 		for (int i = L; i >= 2; --i) {
@@ -218,6 +215,7 @@ public class PE152_Writing_1_2_as_a_sum_of_inverse_squares {
 	private static void recurse(int w) {
 		if (w == 0) {
 			++result;
+
 			return;
 		}
 
