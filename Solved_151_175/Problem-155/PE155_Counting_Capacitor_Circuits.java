@@ -85,7 +85,7 @@ public class PE155_Counting_Capacitor_Circuits {
 				+ "ns)");
 	}
 
-	public static int trim(double[] array, int fromIndex, int toIndex) {
+	private static int trim(double[] array, int fromIndex, int toIndex) {
 		Arrays.sort(array, fromIndex, toIndex);
 		int lastIndex = fromIndex - 1;
 		double last = 0;
