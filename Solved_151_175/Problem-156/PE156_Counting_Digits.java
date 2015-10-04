@@ -63,7 +63,6 @@ public class PE156_Counting_Digits {
 
 			if (mindiff > 1500000L && n % 1000000 == 0) {
 				n = stepN(n, 1000000, 6, sums, digits);
-
 			} else if (mindiff > 1500L && n % 1000 == 0) {
 				n = stepN(n, 1000, 3, sums, digits);
 			} else {
