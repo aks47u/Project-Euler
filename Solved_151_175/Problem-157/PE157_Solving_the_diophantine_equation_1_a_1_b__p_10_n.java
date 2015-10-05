@@ -17,8 +17,7 @@ public class PE157_Solving_the_diophantine_equation_1_a_1_b__p_10_n {
 	public static void main(String[] args) {
 		long start = System.nanoTime();
 
-		int LimitN = 9 + 1;
-		int result = 0;
+		int LimitN = 10, result = 0;
 		int[] magnitude2 = new int[LimitN];
 		magnitude2[0] = 1;
 
@@ -56,7 +55,7 @@ public class PE157_Solving_the_diophantine_equation_1_a_1_b__p_10_n {
 				+ "ns)");
 	}
 
-	public static int f157(int a, int b, int ten) {
+	private static int f157(int a, int b, int ten) {
 		long tensum = (long) ten * (a + b);
 
 		if (tensum % b != 0 || tensum % a != 0) {
@@ -66,7 +65,7 @@ public class PE157_Solving_the_diophantine_equation_1_a_1_b__p_10_n {
 		return prime((int) (tensum / (a * b)));
 	}
 
-	public static int prime(int num) {
+	private static int prime(int num) {
 		int result = 1;
 
 		for (int k = 2; k * k <= num; k++) {
@@ -81,13 +80,13 @@ public class PE157_Solving_the_diophantine_equation_1_a_1_b__p_10_n {
 		}
 
 		if (num != 1) {
-			result = result << 1;
+			result <<= 1;
 		}
 
 		return result;
 	}
 
-	public static int high(int b, int e) {
+	private static int high(int b, int e) {
 		int result = 1;
 
 		while (e > 0) {
