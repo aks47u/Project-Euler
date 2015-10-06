@@ -52,7 +52,7 @@ public class PE160_Factorial_trailing_digits {
 			}
 		}
 
-		BigInteger result = new BigInteger("1");
+		BigInteger result = BigInteger.ONE;
 
 		for (int i = 0; i < ds.length; ++i) {
 			BigInteger temp = BigInteger.valueOf(i).modPow(
