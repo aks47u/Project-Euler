@@ -79,6 +79,7 @@ public class PE161_Triominoes {
 				b[c] -= 3;
 			}
 		}
+
 		if (p + 1 <= h) {
 			if (c + 3 <= w) {
 				if (b[c] == b[c + 1] && b[c] == b[c + 2]) {
