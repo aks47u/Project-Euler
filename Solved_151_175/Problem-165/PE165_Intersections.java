@@ -49,28 +49,36 @@ import java.util.TreeSet;
  * segments?
  */
 public class PE165_Intersections {
-	public static int[] data = new int[20000];
-	public static Line[] lines = new Line[5000];
-	public static double EPS = 1e-9;
+	private static int[] data = new int[20000];
+	private static Line[] lines = new Line[5000];
+	private static double EPS = 1e-9;
 
 	public static void main(String[] args) {
 		long t0 = System.currentTimeMillis();
 		genRandom();
-		for (int n = 0; n < 4 * 5000; n += 4)
+
+		for (int n = 0; n < 4 * 5000; n += 4) {
 			lines[n / 4] = new Line(data[n], data[n + 1], data[n + 2],
 					data[n + 3]);
+		}
 
 		TreeSet<Point> ts = new TreeSet<Point>();
-		for (int i = 0; i < 5000; i++)
-			for (int j = i + 1; j < 5000; j++)
-				if (lines[i].isTrueBoth(lines[j]))
+
+		for (int i = 0; i < 5000; i++) {
+			for (int j = i + 1; j < 5000; j++) {
+				if (lines[i].isTrueBoth(lines[j])) {
 					ts.add(lines[i].point(lines[i].intersect(lines[j])));
+				}
+			}
+		}
+
 		System.out.println(ts.size());
 		System.out.println("time:" + (System.currentTimeMillis() - t0) + "ms");
 	}
 
-	public static void genRandom() {
+	private static void genRandom() {
 		long s = 290797;
+
 		for (int i = 0; i < 20000; i++) {
 			s = (s * s) % 50515093L;
 			data[i] = (int) (s % 500L);
@@ -97,16 +105,22 @@ public class PE165_Intersections {
 			int kx = line.x1 - line.x0, ky = line.y1 - line.y0;
 			int t = (kx * (y0 - line.y0) + ky * (line.x0 - x0));
 			int b = (mx * ky - my * kx);
-			if ((t == 0 || b == 0) || (b > 0 && t < 0) || (b < 0 && t > 0))
+
+			if ((t == 0 || b == 0) || (b > 0 && t < 0) || (b < 0 && t > 0)) {
 				return false;
-			if (b < 0)
+			}
+
+			if (b < 0) {
 				return -t < -b;
+			}
+
 			return t < b;
 		}
 
 		public double intersect(Line line) {
 			double mx = x1 - x0, my = y1 - y0;
 			double kx = line.x1 - line.x0, ky = line.y1 - line.y0;
+
 			return (kx * (y0 - line.y0) + ky * (line.x0 - x0))
 					/ (mx * ky - my * kx);
 		}
@@ -126,10 +140,15 @@ public class PE165_Intersections {
 
 		public int compareTo(Object o) {
 			Point p = (Point) o;
-			if (Math.abs(p.x - x) > EPS)
+
+			if (Math.abs(p.x - x) > EPS) {
 				return (int) Math.signum(p.x - x);
-			if (Math.abs(p.y - y) > EPS)
+			}
+
+			if (Math.abs(p.y - y) > EPS) {
 				return (int) Math.signum(p.y - y);
+			}
+
 			return 0;
 		}
 	}
