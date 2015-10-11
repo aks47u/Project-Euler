@@ -72,7 +72,6 @@ public class PE167_Investigating_Ulam_sequences {
 			} else {
 				if (used[testVal - 2]) {
 					hits++;
-
 				}
 
 				if (used[testVal - secondEven]) {
