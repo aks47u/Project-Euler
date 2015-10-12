@@ -18,7 +18,7 @@ public class PE168_Number_Rotations {
 	public static void main(String[] args) {
 		long start = System.nanoTime();
 
-		final BigInteger TEN = BigInteger.valueOf(10);
+		final BigInteger TEN = BigInteger.TEN;
 		final BigInteger HUNDRED_THOUSAND = BigInteger.valueOf(100000);
 		BigInteger total = BigInteger.ZERO;
 
@@ -31,10 +31,10 @@ public class PE168_Number_Rotations {
 					BigInteger div = (TEN.multiply(n)).subtract(BigInteger.ONE);
 
 					if (denom.mod(div).equals(BigInteger.ZERO)) {
-						final BigInteger num = denom.divide(div);
+						final BigInteger NUM = denom.divide(div);
 
-						if (num.toString().length() == pow) {
-							BigInteger value = new BigInteger("" + num + a);
+						if (NUM.toString().length() == pow) {
+							BigInteger value = new BigInteger("" + NUM + a);
 
 							if (value.toString().length() <= 100) {
 								total = total.add(value);
