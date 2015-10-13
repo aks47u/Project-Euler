@@ -13,9 +13,9 @@ package Solved_176_200;
  * 47547 different integer sided right-angled triangles.
  */
 public class PE176_Right_angled_triangles_that_share_a_cathetus {
-	private static int[] c; // largest prime factor
-	private static int[] x; // next prime
-	private static double[] log; // natural log
+	private static int[] c;
+	private static int[] x;
+	private static double[] log;
 	private static long min = Long.MAX_VALUE;
 	private static double mlg = Math.log(min);
 
@@ -23,16 +23,16 @@ public class PE176_Right_angled_triangles_that_share_a_cathetus {
 		long start = System.nanoTime();
 
 		int n = 47547;
-		int m = 2 * n + 1; // factorize (2n + 1)
+		int m = 2 * n + 1;
 		c = new int[m + 1];
 		x = new int[m + 1];
 		log = new double[m + 1];
 
 		for (int i = 1; i <= m; i++) {
-			log[i] = Math.log(i); // cache logs
+			log[i] = Math.log(i);
 		}
 
-		for (int i = 2; i <= m; i++) { // sieve
+		for (int i = 2; i <= m; i++) {
 			if (c[i] == 0) {
 				for (int j = i; j <= m; j += i) {
 					c[j] = i;
@@ -40,9 +40,9 @@ public class PE176_Right_angled_triangles_that_share_a_cathetus {
 			}
 		}
 
-		c[m] = m + 5; // next prime is out of bounds
+		c[m] = m + 5;
 
-		for (int i = m - 1; i >= 2; i--) { // next prime
+		for (int i = m - 1; i >= 2; i--) {
 			if (c[i] == i) {
 				x[i] = i;
 			} else {
@@ -55,7 +55,7 @@ public class PE176_Right_angled_triangles_that_share_a_cathetus {
 				int e = (d - 1) >> 1;
 		
 				if (e > 0) {
-					e++; // times 2
+					e++;
 				}
 				
 				subok(m / d, 1L << e, e * log[2], 3, "2^" + e, m / d);
@@ -75,7 +75,7 @@ public class PE176_Right_angled_triangles_that_share_a_cathetus {
 			return;
 		}
 
-		if (m == 1) { // m is eradicated
+		if (m == 1) {
 			min = prod;
 			mlg = lg;
 		} else {
