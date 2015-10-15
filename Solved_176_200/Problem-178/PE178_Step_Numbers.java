@@ -17,11 +17,11 @@ public class PE178_Step_Numbers {
 		long start = System.nanoTime();
 
 		int limit = 40;
-		long[][][][] a = new long[limit][2][2][10]; // 10 final digits
-		Arrays.fill(a[0][0][0], 1); // without 0 without 9
-		Arrays.fill(a[0][0][1], 0); // without 0 with 9
-		Arrays.fill(a[0][1][0], 0); // with 0 without 9
-		Arrays.fill(a[0][1][1], 0); // with 0 with 9
+		long[][][][] a = new long[limit][2][2][10];
+		Arrays.fill(a[0][0][0], 1);
+		Arrays.fill(a[0][0][1], 0);
+		Arrays.fill(a[0][1][0], 0);
+		Arrays.fill(a[0][1][1], 0);
 		a[0][0][0][0] = 0;
 		a[0][0][0][9] = 0;
 		a[0][0][1][9] = 1;
