@@ -56,7 +56,6 @@ public class PE180_Rational_zeros_of_a_function_of_three_variables {
 						for (long xb = xa + 1; xb <= size; xb++) {
 							if (gcd(xa, xb) == 1) {
 								Rational x = new Rational(xa, xb);
-
 								Rational y = new Rational(z);
 								y.sub(x);
 
