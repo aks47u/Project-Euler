@@ -129,6 +129,7 @@ public class PE185_Number_Mind {
 			}
 
 			result = new String(mustBe);
+
 			return;
 		}
 
@@ -155,7 +156,6 @@ public class PE185_Number_Mind {
 			return;
 		}
 
-		// Some tricks to only use one set of loops
 		int a = numCorr - 3;
 		int[] newCannotBeBits = new int[cannotBeBits.length];
 		System.arraycopy(cannotBeBits, 0, newCannotBeBits, 0,
@@ -174,7 +174,6 @@ public class PE185_Number_Mind {
 
 					if (aPos >= 0) {
 						mustBe[aPos] = gChars[aPos];
-
 					}
 
 					if (bPos >= 0) {
@@ -224,7 +223,6 @@ public class PE185_Number_Mind {
 		}
 	}
 
-	// Determine next constraint to use
 	private static int nextPos(char[] mustBe, int[] cannotBeBits,
 			int usedPositions) {
 		int bestPos = -1;
@@ -248,7 +246,6 @@ public class PE185_Number_Mind {
 				} else if (mb == 0
 						&& ((cannotBeBits[i] & (1 << (gChars[i] - '0'))) == 0)) {
 					freePos++;
-
 				}
 			}
 
@@ -259,7 +256,7 @@ public class PE185_Number_Mind {
 			int count = comb[freePos][numCorr];
 
 			if (count == 0) {
-				return p; // this must be the best
+				return p;
 			}
 
 			if (count < lowestCount) {
