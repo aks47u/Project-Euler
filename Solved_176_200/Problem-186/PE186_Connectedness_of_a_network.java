@@ -46,8 +46,6 @@ public class PE186_Connectedness_of_a_network {
 
 			if (caller != called) {
 				result++;
-
-				// Add caller.
 				UnionSet us1 = sets[caller];
 
 				if (us1 == null) {
@@ -55,7 +53,6 @@ public class PE186_Connectedness_of_a_network {
 					us1.size++;
 				}
 
-				// Add called.
 				UnionSet us2 = sets[called];
 
 				if (us2 == null) {
@@ -65,7 +62,6 @@ public class PE186_Connectedness_of_a_network {
 
 				us1.union(us2);
 
-				// Test end condition.
 				if (sets[PM] != null && sets[PM].get().size >= 990000) {
 					long end = System.nanoTime();
 					long runtime = end - start;
@@ -91,7 +87,6 @@ public class PE186_Connectedness_of_a_network {
 
 			}
 
-			// Optimisation
 			UnionSet foo = this;
 
 			while (foo != rv) {
@@ -110,7 +105,6 @@ public class PE186_Connectedness_of_a_network {
 				return;
 			}
 
-			// Unrelated.
 			UnionSet rv = new UnionSet();
 			rv.size = p1.size + p2.size;
 			p1.parent = p2.parent = rv;
