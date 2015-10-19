@@ -51,8 +51,9 @@ public class PE191_Prize_Strings {
 							array[i][j][k][l][1] = 0;
 						}
 
-						if (i == days - 1)
+						if (i == days - 1) {
 							result += (array[i][j][k][l][0] + array[i][j][k][l][1]);
+						}
 					}
 				}
 			}
