@@ -92,9 +92,7 @@ public class PE194_Coloured_Configurations {
 
 			if (arr[1] == arr[6]) {
 				return new long[] { 0, 1 };
-			}
-
-			else {
+			} else {
 				return new long[] { 1, 1 };
 			}
 		}
