@@ -80,7 +80,6 @@ public class PE196_Prime_triplets {
 
 		for (int d = 0; d < 6 && cnt < 3; d++) {
 			if (d != fromdir) {
-				// go in that direction
 				int x2 = x, y2 = y;
 				long n2 = n;
 
