@@ -53,8 +53,9 @@ public class PE200_Find_the_200th_prime_proof_sqube_containing_the_contiguous_su
 
 		for (int i = 2; i < prime.length; i++) {
 			if (prime[i]) {
-				for (int j = 2 * i; j < prime.length; j += i)
+				for (int j = 2 * i; j < prime.length; j += i) {
 					prime[j] = false;
+				}
 			}
 		}
 
@@ -115,8 +116,9 @@ public class PE200_Find_the_200th_prime_proof_sqube_containing_the_contiguous_su
 
 	private static boolean sorted() {
 		for (int i = 0; i < list.size() - 1; i++) {
-			if (list.get(i).compareTo(list.get(i + 1)) > 0)
+			if (list.get(i).compareTo(list.get(i + 1)) > 0) {
 				return false;
+			}
 		}
 
 		return true;
