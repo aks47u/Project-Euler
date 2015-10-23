@@ -52,6 +52,7 @@ public class PE201_Subsets_with_a_unique_sum {
 				;
 			}
 		}
+
 		for (int i = result = 0; ++i < r.length / l; result += r[i * l + y] == 1 ? i
 				: 0) {
 			;
