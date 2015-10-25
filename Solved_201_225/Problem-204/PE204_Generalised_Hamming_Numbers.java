@@ -32,9 +32,9 @@ public class PE204_Generalised_Hamming_Numbers {
 	}
 
 	private static int hamming(int i, int j) {
-		if (j == 0)
+		if (j == 0) {
 			return (int) (Math.log(i) / Math.log(2)) + 1;
-		else {
+		} else {
 			int result = 0;
 
 			while (i > 0) {
