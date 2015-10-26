@@ -45,6 +45,7 @@ public class PE207_Integer_partition_equations {
 					System.out.println(n * n + n);
 					System.out.println("Runtime: " + runtime / 1000000 + "ms ("
 							+ runtime + "ns)");
+
 					return;
 				}
 			}
