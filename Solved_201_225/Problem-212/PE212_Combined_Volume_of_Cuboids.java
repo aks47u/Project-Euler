@@ -355,6 +355,7 @@ class CuboidIndex extends HashMap<Cuboid, Set<Cuboid>> {
 	public boolean isFull(Set<Cuboid> s) {
 		if (s.size() >= 1) {
 			Iterator<Cuboid> p = s.iterator();
+
 			return isFull(p.next());
 		}
 
