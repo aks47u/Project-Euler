@@ -127,9 +127,9 @@ public class PE216_Investigating_the_primality_of_numbers_of_the_form_2n2_1 {
 			while ((a & 1) == 0) {
 				a >>= 1;
 
-			if ((m & 7) == 3 || (m & 7) == 5) {
-				t = -t;
-			}
+				if ((m & 7) == 3 || (m & 7) == 5) {
+					t = -t;
+				}
 			}
 
 			z = a;
